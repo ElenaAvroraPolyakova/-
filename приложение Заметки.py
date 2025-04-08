@@ -37,18 +37,18 @@ else:
 print("Заметка не найдена.")
 
 def delete_note():
-    note_title = input("Введите название заметки для удаления: ")
+    note_title = input("Введите название заметки для её удаления: ")
 
 if os.path.exists(f"{note_title}.txt"):
     os.remove(f"{note_title}.txt")
     print(f"Заметка '{note_title}' успешно удалена!")
 else:
-print("Заметка не найдена.")
+print("Заметка не найдена")
 def main_menu():
 while True:
     print("\n--- Меню системы заметок ---")
     print("1. Создать заметку")
-    print("2. Отобразить заметки")
+    print("2. Отобразить все заметки")
     print("3. Редактировать заметку")
     print("4. Удалить заметку")
     print("5. Выйти")
@@ -64,10 +64,10 @@ elif choice == "3":
 elif choice == "4":
     delete_note()
 elif choice == "5":
-    print("Выход из программы.")
+    print("Выход из программы")
 break
 else:
-print("Неверный ввод. Пожалуйста, попробуйте снова.")
+print("Неверный ввод. Пожалуйста, попробуйте снова")
 
 def main():
 main_menu()
